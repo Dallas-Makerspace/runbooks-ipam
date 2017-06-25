@@ -6,6 +6,7 @@ generic ansible and docker-compose files to setup dns and dhcp within pfsence
   - ansible 2.0+
   - docker-compose
   - docker
+  - amatas/ansible-pfsense
 
 ## usage
 
