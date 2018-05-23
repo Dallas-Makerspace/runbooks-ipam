@@ -1,0 +1,7 @@
+---
+version: '3.2'
+services:
+  runbooks-ipam:
+    build:
+      context: .
+    image: runbooks-ipam:latest
