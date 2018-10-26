@@ -1,7 +1,12 @@
 ---
 version: '3.2'
 services:
+
   runbooks-ipam:
-    build:
-      context: .
     image: runbooks-ipam:latest
+    deploy:
+      replicas: 1
+      labels:
+        - org.dallasmakerspace.schema.owner="infrastructure@dallasmakerspace.org"
+...
+# VIM: set sts=2 ts=2 et sw=2 ai:
