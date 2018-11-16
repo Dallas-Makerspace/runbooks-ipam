@@ -6,4 +6,4 @@ services:
   - docker
   
 script:
-  - docker-compose up -d
+  - docker stack deploy -c docker-compose.yml "$(basename $(pwd))"
