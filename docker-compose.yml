@@ -3,7 +3,7 @@ version: '3.4'
 services:
 
   runbooks-ipam:
-    image: dallasmakerspace/runbooks-ipam:centos7
+    image: dallasmakerspace/runbooks-ipam:latest
     deploy:
       replicas: 1
       labels:
