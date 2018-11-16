@@ -1,2 +1,5 @@
 [local]
 localhost ansible_connection=local
+
+[dms]
+physical.dallasmakerspace.org ansible_port=2222
