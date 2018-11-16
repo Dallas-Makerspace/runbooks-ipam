@@ -1,4 +1,4 @@
-# runbooks-ipam [![runbooks-ipam](https://travis-ci.com/Dallas-Makerspace/runbooks-ipam.dallasmakerspace.org.svg?branch=master)](https://travis-ci.com/Dallas-Makerspace/runbooks-ipam.dallasmakerspace.org/builds)
+# runbooks-ipam [![runbooks-ipam](https://travis-ci.com/Dallas-Makerspace/runbooks-ipam.svg?branch=master)](https://travis-ci.com/Dallas-Makerspace/runbooks-ipam/builds)
 
 Generic ansible and docker-compose files to setup dns and dhcp within pfsence
 
