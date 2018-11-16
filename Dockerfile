@@ -1,4 +1,4 @@
-FROM ansible:latest
+FROM ansible/ansible:latest
 LABEL maintainer=denzuko@dallasmakerspace.org
 COPY . /src
 WORKDIR /src
