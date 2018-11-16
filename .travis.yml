@@ -1,9 +1,9 @@
 sudo: required
 
+services:
+  - docker
+
 language: python
-python:
-  - 3.6
-  - 2.8
 
 # Doc: https://docs.travis-ci.com/user/customizing-the-build#Build-Matrix
 env:
@@ -19,4 +19,4 @@ script:
   - ansible-playbook playbook.yml --syntax-check
 
   # Run the role/playbook with ansible-playbook.
-  - [ JOB_DEBUG == "1" ] &&ansible-playbook playbook.yml -vvvv || ansible-playbook playbook.yml
+  - [ JOB_DEBUG == "1" ] && ansible-playbook playbook.yml -vvvv || ansible-playbook playbook.yml
