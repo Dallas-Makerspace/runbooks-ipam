@@ -1,10 +1,21 @@
 sudo: required
 
 language: python
+python:
+  - 3.6
 
-services:
-  - docker
-  
+# Doc: https://docs.travis-ci.com/user/customizing-the-build#Build-Matrix
+env:
+  - ANSIBLE_VERSION=latest
+
+install:
+  # Install Ansible.
+  - pip install ansible==${ANSIBLE_VERSION:-"latest"}
+  - [ "$ANSIBLE_VERSION" = "latest" ] &&  pip install ansible-lint
+
 script:
+  # Check the role/playbook's syntax.
+  - ansible-playbook playbook.yml --syntax-check
 
-  - docker-compose up
+  # Run the role/playbook with ansible-playbook.
+  - [ JOB_DEBUG == "1" ] &&ansible-playbook playbook.yml -vvvv || ansible-playbook playbook.yml
